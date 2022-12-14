@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+import theme from 'styles/theme'
 
 export const Wrapper = styled.menu`
   display: flex;
@@ -7,7 +8,7 @@ export const Wrapper = styled.menu`
   padding: 0.8rem 0;
   padding-left: 1.2rem;
   position: relative;
-  background-color: white;
+  background-color: ${theme.colors.lightBg};
   height: 6rem;
   border-bottom: 0.3rem solid lightgray;
   ${media.lessThan('medium')`
@@ -64,7 +65,9 @@ export const MenuLink = styled.a`
   text-decoration: none;
   text-align: center;
   font-weight: bold;
+
   &:hover {
+    color: ${theme.colors.primary};
     &::after {
       content: '';
       position: absolute;
@@ -73,7 +76,7 @@ export const MenuLink = styled.a`
       ${media.lessThan('medium')`
           height: 0.4rem;
       `}
-      border-bottom: 0.5rem solid hsl(26, 100%, 55%);
+      border-bottom: 0.5rem solid ${theme.colors.primary};
       animation: hoverAnimation 0.2s forwards;
     }
     @keyframes hoverAnimation {
@@ -86,15 +89,6 @@ export const MenuLink = styled.a`
         left: 0;
       }
     }
-  }
-`
-export const IconCart = styled.div`
-  cursor: pointer;
-  width: 2.4rem;
-  height: 2.4rem;
-  color: gray;
-  :hover {
-    color: hsl(26, 100%, 55%);
   }
 `
 
@@ -152,14 +146,4 @@ export const Sombra = styled.div`
   top: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 10;
-`
-
-export const Cart = styled.div`
-  z-index: 100;
-  position: absolute;
-  right: 0%;
-  top: 10rem;
-  -webkit-box-shadow: 0px 0px 28px -1px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 28px -1px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 0px 28px -1px rgba(0, 0, 0, 0.6);
 `
