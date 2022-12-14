@@ -17,11 +17,20 @@ export const Wrapper = styled.menu`
  `}
 `
 export const LogoWrapper = styled.div`
+  margin-left: 2rem;
   ${media.lessThan('medium')`
   position: absolute ;
   margin-left: 10.5rem;
-    transform: translateX(-50%);
+  transform: translateX(-50%);
  `}
+`
+
+export const Logo = styled.div`
+  background: url('/img/logo-example.png');
+  height: 5rem;
+  width: 5rem;
+  background-position: center;
+  background-size: cover;
 `
 
 export const IconWrapper = styled.div`

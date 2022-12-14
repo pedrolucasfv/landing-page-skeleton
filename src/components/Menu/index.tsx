@@ -22,8 +22,8 @@ const Menu = ({ section1, section2, section3 }: MenuProps) => {
         </S.IconWrapper>
       </MediaMatch>
 
-      <S.LogoWrapper color="white">
-        <h1> </h1>
+      <S.LogoWrapper>
+        <S.Logo />
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">
