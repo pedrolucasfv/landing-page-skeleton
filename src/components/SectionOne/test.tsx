@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 
 import SectionOne from '.'
+import { renderWithTheme } from '../../../utils/tests/helpers'
 
 const args = {
   image: '/img/image-example.png',
@@ -9,7 +10,7 @@ const args = {
 
 describe('<SectionOne />', () => {
   it('should render the params text', () => {
-    render(<SectionOne {...args} />)
+    renderWithTheme(<SectionOne {...args} />)
 
     expect(
       screen.getByRole('heading', { name: /Lorem Ipsum/i })

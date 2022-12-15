@@ -18,8 +18,7 @@ export const Wrapper = styled.main`
 
 export const Text = styled.h2`
   display: flex;
-  grid-column: 2;
-  grid-row: 2;
+
   justify-content: center;
   align-items: center;
 `
@@ -30,10 +29,30 @@ type ImageProps = {
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
     height: 100%;
+    width: 25rem;
     grid-column: 4;
     grid-row: 2;
     background-image: url(${src});
     background-position: center;
-    background-size: cover;
+    background-size: contain;
   `}
+`
+export const Heading = styled.h2`
+  ${({ theme }) => css`
+    position: relative;
+    margin-bottom: ${theme.spacings.medium};
+    font-size: 3rem;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      content: '';
+      width: 5rem;
+      border-bottom: 0.5rem solid ${theme.colors.primary};
+    }
+  `}
+`
+export const Info = styled.div`
+  grid-column: 2;
+  grid-row: 2;
 `

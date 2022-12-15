@@ -2879,12 +2879,12 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*", "@types/jest@^27.4.0":
-  "integrity" "sha512-gHl8XuC1RZ8H2j5sHv/JqsaxXkDDM9iDOgu0Wp8sjs4u/snb2PVehyWXJPr+ORA0RPpgw231mnutWI1+0hgjIQ=="
-  "resolved" "https://registry.npmjs.org/@types/jest/-/jest-27.4.0.tgz"
-  "version" "27.4.0"
+"@types/jest@*", "@types/jest@^27.5.2":
+  "integrity" "sha512-mpT8LJJ4CMeeahobofYWIjFo0xonRS/HfxnVEPMPFSQdGUt1uHCnoPT7Zhb+sjDU2wz0oKV0OLUR0WzrHNgfeA=="
+  "resolved" "https://registry.npmjs.org/@types/jest/-/jest-27.5.2.tgz"
+  "version" "27.5.2"
   dependencies:
-    "jest-diff" "^27.0.0"
+    "jest-matcher-utils" "^27.0.0"
     "pretty-format" "^27.0.0"
 
 "@types/json-schema@*", "@types/json-schema@^7.0.4", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
@@ -8258,16 +8258,6 @@
     "pretty-format" "^27.4.6"
     "slash" "^3.0.0"
 
-"jest-diff@^27.0.0":
-  "integrity" "sha512-ujc9ToyUZDh9KcqvQDkk/gkbf6zSaeEg9AiBxtttXW59H/AcqEYp1ciXAtJp+jXWva5nAf/ePtSsgWwE5mqp4Q=="
-  "resolved" "https://registry.npmjs.org/jest-diff/-/jest-diff-27.4.2.tgz"
-  "version" "27.4.2"
-  dependencies:
-    "chalk" "^4.0.0"
-    "diff-sequences" "^27.4.0"
-    "jest-get-type" "^27.4.0"
-    "pretty-format" "^27.4.2"
-
 "jest-diff@^27.4.6":
   "integrity" "sha512-zjaB0sh0Lb13VyPsd92V7HkqF6yKRH9vm33rwBt7rPYrpQvS1nCvlIy2pICbKta+ZjWngYLNn4cCK4nyZkjS/w=="
   "resolved" "https://registry.npmjs.org/jest-diff/-/jest-diff-27.4.6.tgz"
@@ -8398,7 +8388,7 @@
     "jest-get-type" "^27.4.0"
     "pretty-format" "^27.4.6"
 
-"jest-matcher-utils@^27.4.6":
+"jest-matcher-utils@^27.0.0", "jest-matcher-utils@^27.4.6":
   "integrity" "sha512-XD4PKT3Wn1LQnRAq7ZsTI0VRuEc9OrCPFiO1XL7bftTGmfNF0DcEwMHRgqiu7NGf8ZoZDREpGrCniDkjt79WbA=="
   "resolved" "https://registry.npmjs.org/jest-matcher-utils/-/jest-matcher-utils-27.4.6.tgz"
   "version" "27.4.6"
@@ -10590,7 +10580,7 @@
     "lodash" "^4.17.20"
     "renderkid" "^3.0.0"
 
-"pretty-format@^27.0.0", "pretty-format@^27.0.2", "pretty-format@^27.4.2", "pretty-format@^27.4.6":
+"pretty-format@^27.0.0", "pretty-format@^27.0.2", "pretty-format@^27.4.6":
   "integrity" "sha512-NblstegA1y/RJW2VyML+3LlpFjzx62cUrtBIKIWDXEDkjNeleA7Od7nrzcs/VLQvAeV4CgSYhrN39DRN88Qi/g=="
   "resolved" "https://registry.npmjs.org/pretty-format/-/pretty-format-27.4.6.tgz"
   "version" "27.4.6"
