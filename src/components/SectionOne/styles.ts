@@ -29,12 +29,12 @@ type ImageProps = {
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
     height: 100%;
-    width: 25rem;
+    width: 30rem;
     grid-column: 4;
     grid-row: 2;
     background-image: url(${src});
     background-position: center;
-    background-size: contain;
+    background-size: cover;
   `}
 `
 export const Heading = styled.h2`

@@ -1,4 +1,5 @@
 import Menu from 'components/Menu'
+import Footer from 'components/Footer'
 import SectionOne from 'components/SectionOne'
 import SectionTwo from 'components/SectionTwo'
 
@@ -17,6 +18,10 @@ export default function Home() {
           '/img/image-example-slider-3.jpg'
         ]}
         text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
+      />
+      <Footer
+        image="/img/image-example.png"
+        text="Lorem Ipsum is simply dummy Lorem Ipsum is simply dummLorem Ipsum is simply dummy"
       />
     </>
   )

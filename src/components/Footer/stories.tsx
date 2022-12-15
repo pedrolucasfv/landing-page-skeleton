@@ -6,7 +6,7 @@ export default {
   component: Footer,
   args: {
     image: '/img/image-example.png',
-    text: 'Lorem Ipsum is simply dummy'
+    text: 'Lorem Ipsum is simply dummy Lorem Ipsum is simply dummLorem Ipsum is simply dummy'
   }
 } as Meta
 

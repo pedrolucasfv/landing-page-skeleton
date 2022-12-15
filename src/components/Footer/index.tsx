@@ -21,12 +21,11 @@ const Footer = ({ image, text }: FooterProps) => (
         <S.Heading>heading</S.Heading>
         <S.Text>{text}</S.Text>
       </S.ContentInfo>
-      <S.ContentInfo grid="grid4">
-        <S.Heading>heading</S.Heading>
-        <S.Text>{text}</S.Text>
-      </S.ContentInfo>
     </S.Info>
-    <S.Image src={image} />
+    <S.ContentImage>
+      <S.Image src={image} />
+    </S.ContentImage>
+    <S.Copyright>Pedro Lucas F.V. 2022 © All rights reserved.</S.Copyright>
   </S.Wrapper>
 )
 

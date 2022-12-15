@@ -8,9 +8,16 @@ export const Wrapper = styled.menu`
   padding: 0.8rem 0;
   padding-left: 1.2rem;
   position: relative;
-  background-color: ${theme.colors.lightBg};
+  background: linear-gradient(
+    to left top,
+    #e3e3e3,
+    #dedede,
+    #e5e5e5,
+    #ececec,
+    #f5f5f5
+  );
   height: 6rem;
-  border-bottom: 0.3rem solid lightgray;
+  border-bottom: 0.3rem solid ${theme.colors.primary};
   ${media.lessThan('medium')`
      padding-right: 1.2rem;
      height: 6rem;
@@ -52,7 +59,7 @@ export const MenuGroup = styled.div`
     `}
   }
   ${media.greaterThan('medium')`
-    padding: 5rem;
+    padding: 7rem;
     margin-right: 2rem;
     > button { 
     padding: 1rem 2rem;
@@ -70,13 +77,15 @@ export const MenuLink = styled.a`
   position: relative;
   color: gray;
   font-size: 1.4rem;
-  margin: 0.3rem 2.8rem 0;
+  margin: 0.3rem 1rem 0;
   text-decoration: none;
   text-align: center;
   font-weight: bold;
+  padding: 1.8rem 2rem;
 
   &:hover {
     color: ${theme.colors.primary};
+    background-color: lightpink;
     &::after {
       content: '';
       position: absolute;

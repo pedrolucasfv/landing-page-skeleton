@@ -11,17 +11,20 @@ export const Wrapper = styled.main`
       #f5f5f5
     );
     color: #131313;
-    height: calc(100vh - 5rem);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 80% 20%;
+
     border-top: 0.6rem solid ${theme.colors.primary};
+    padding: 2rem 4rem;
   `}
 `
 
-export const Text = styled.h2`
+export const Text = styled.h4`
   display: flex;
-
+  font-size: 1.2rem;
+  font-weight: 500;
   justify-content: center;
   align-items: center;
 `
@@ -36,7 +39,16 @@ export const Image = styled.div<ImageProps>`
     background-image: url(${src});
     background-position: center;
     background-size: cover;
+    margin: 0 5rem;
   `}
+`
+
+export const ContentImage = styled.div`
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 export const Heading = styled.h2`
   ${({ theme }) => css`
@@ -55,34 +67,33 @@ export const Heading = styled.h2`
 `
 
 export const Info = styled.div`
-  display: grid;
-  grid-template-columns: 40% 20% 40%;
-  grid-template-rows: 40% 20% 40%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+
+  align-items: center;
 `
 type GridProps = {
-  grid: 'grid1' | 'grid2' | 'grid3' | 'grid4'
+  grid: 'grid1' | 'grid2' | 'grid3'
 }
 
 const contentModifiers = {
-  grid1: () => css`
-    grid-column: 1;
-    grid-row: 1;
-  `,
-  grid2: () => css`
-    grid-column: 1;
-    grid-row: 3;
-  `,
-  grid3: () => css`
-    grid-column: 3;
-    grid-row: 1;
-  `,
-  grid4: () => css`
-    grid-column: 3;
-    grid-row: 3;
-  `
+  grid1: () => css``,
+  grid2: () => css``,
+  grid3: () => css``
 }
 export const ContentInfo = styled.div<GridProps>`
   ${({ grid }) => css`
     ${contentModifiers[grid]}
   `}
+  padding: 0 5rem
+`
+
+export const Copyright = styled.h2`
+  grid-column: 1/3;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a2a2a2;
 `
