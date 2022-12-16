@@ -6,7 +6,16 @@ export default {
   component: Footer,
   args: {
     image: '/img/image-example.png',
-    text: 'Lorem Ipsum is simply dummy Lorem Ipsum is simply dummLorem Ipsum is simply dummy'
+    boxItem: [
+      {
+        title: 'Contato',
+        text: 'Aqui eu posso botar umas perguntinhas para serem respondidas'
+      },
+      {
+        title: 'Localização',
+        text: 'aqui eu vou por alguma coisa'
+      }
+    ]
   }
 } as Meta
 

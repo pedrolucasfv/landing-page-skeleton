@@ -1,26 +1,21 @@
 import * as S from './styles'
 import React from 'react'
+import { BoxItemProps } from 'types/api'
 
 export type FooterProps = {
   image: string
-  text: string
+  boxItem: BoxItemProps[]
 }
 
-const Footer = ({ image, text }: FooterProps) => (
+const Footer = ({ image, boxItem }: FooterProps) => (
   <S.Wrapper>
     <S.Info>
-      <S.ContentInfo grid="grid1">
-        <S.Heading>heading</S.Heading>
-        <S.Text>{text}</S.Text>
-      </S.ContentInfo>
-      <S.ContentInfo grid="grid2">
-        <S.Heading>heading</S.Heading>
-        <S.Text>{text}</S.Text>
-      </S.ContentInfo>
-      <S.ContentInfo grid="grid3">
-        <S.Heading>heading</S.Heading>
-        <S.Text>{text}</S.Text>
-      </S.ContentInfo>
+      {boxItem.map((item, index) => (
+        <S.ContentInfo key={index}>
+          <S.Heading>{item.title}</S.Heading>
+          <S.Text>{item.text}</S.Text>
+        </S.ContentInfo>
+      ))}
     </S.Info>
     <S.ContentImage>
       <S.Image src={image} />

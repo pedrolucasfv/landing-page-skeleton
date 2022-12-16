@@ -1,21 +1,23 @@
 {
   "collectionName": "components_page_footers",
   "info": {
-    "displayName": "footer"
+    "displayName": "footer",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "text": {
-      "type": "string",
-      "required": true
-    },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "boxItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.item-box"
     }
   }
 }

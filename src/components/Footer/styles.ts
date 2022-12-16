@@ -25,7 +25,7 @@ export const Text = styled.h4`
   display: flex;
   font-size: 1.2rem;
   font-weight: 500;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `
 
@@ -73,21 +73,8 @@ export const Info = styled.div`
 
   align-items: center;
 `
-type GridProps = {
-  grid: 'grid1' | 'grid2' | 'grid3'
-}
 
-const contentModifiers = {
-  grid1: () => css``,
-  grid2: () => css``,
-  grid3: () => css``
-}
-export const ContentInfo = styled.div<GridProps>`
-  ${({ grid }) => css`
-    ${contentModifiers[grid]}
-  `}
-  padding: 0 5rem
-`
+export const ContentInfo = styled.div``
 
 export const Copyright = styled.h2`
   grid-column: 1/3;

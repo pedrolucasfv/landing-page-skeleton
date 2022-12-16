@@ -31,17 +31,17 @@
       "repeatable": false,
       "component": "page.section-two"
     },
-    "footer": {
-      "displayName": "footer",
-      "type": "component",
-      "repeatable": false,
-      "component": "page.footer"
-    },
     "sectionThree": {
       "displayName": "sectionThree",
       "type": "component",
       "repeatable": false,
       "component": "page.section-three"
+    },
+    "footer": {
+      "displayName": "footer",
+      "type": "component",
+      "repeatable": false,
+      "component": "page.footer"
     }
   }
 }
