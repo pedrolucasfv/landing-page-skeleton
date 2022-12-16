@@ -16,12 +16,7 @@ export const Wrapper = styled.main`
   grid-template-columns: 7% 38% 10% 38% 7%;
 `
 
-export const Text = styled.h2`
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-`
+export const Text = styled.h2``
 
 type ImageProps = {
   src: string
@@ -55,4 +50,8 @@ export const Heading = styled.h2`
 export const Info = styled.div`
   grid-column: 2;
   grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 `

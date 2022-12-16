@@ -36,6 +36,12 @@
       "type": "component",
       "repeatable": false,
       "component": "page.footer"
+    },
+    "sectionThree": {
+      "displayName": "sectionThree",
+      "type": "component",
+      "repeatable": false,
+      "component": "page.section-three"
     }
   }
 }

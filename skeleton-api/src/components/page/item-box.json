@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_item_boxes",
+  "info": {
+    "displayName": "itemBox",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "text": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -29,8 +29,18 @@ export type SectionTwoProps = {
   text: string
 }
 
+export type BoxItemProps = {
+  title: string
+  text: string
+}
+export type SectionThreeProps = {
+  boxItem: BoxItemProps[]
+  title: string
+}
+
 export type LandingPageProps = {
   menu: MenuProps
   sectionOne: SectionOneProps
   sectionTwo: SectionTwoProps
+  sectionThree: SectionThreeProps
 }

@@ -39,6 +39,15 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       text
     }
   }
+  fragment sectionThree on LandingPage {
+    sectionThree {
+      title
+      boxItem {
+        title
+        text
+      }
+    }
+  }
 
   query GET_LANDING_PAGE {
     landingPage {
@@ -47,6 +56,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
           ...menu
           ...sectionOne
           ...sectionTwo
+          ...sectionThree
         }
       }
     }

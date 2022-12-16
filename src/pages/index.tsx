@@ -7,18 +7,21 @@ import { GetStaticProps } from 'next'
 import client from 'graphql/client'
 import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
 import { LandingPageProps } from 'types/api'
+import SectionThree from 'components/SectionThree'
 
 export default function Home({
   menu,
   sectionOne,
-  sectionTwo
+  sectionTwo,
+  sectionThree
 }: LandingPageProps) {
-  console.log(sectionTwo.slider.data)
+  console.log(sectionThree)
   return (
     <>
       <Menu {...menu} />
       <SectionOne {...sectionOne} />
       <SectionTwo {...sectionTwo} />
+      <SectionThree {...sectionThree} />
       <Footer
         image="/img/image-example.png"
         text="Lorem Ipsum is simply dummy Lorem Ipsum is simply dummLorem Ipsum is simply dummy"
