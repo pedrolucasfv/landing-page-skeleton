@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react'
-import SectionOne, { SectionOneProps } from '.'
+import { SectionOneProps } from 'types/api'
+import SectionOne from '.'
 
 export default {
   title: 'SectionOne',

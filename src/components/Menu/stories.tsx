@@ -1,10 +1,12 @@
 import { Story, Meta } from '@storybook/react'
-import Menu, { MenuProps } from '.'
+import { MenuProps } from 'types/api'
+import Menu from '.'
 
 export default {
   title: 'Menu',
   component: Menu,
   args: {
+    image: '/img/logo-example.png',
     section1: 'Ínicio',
     section2: 'Galeria',
     section3: 'Contato'

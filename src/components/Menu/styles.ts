@@ -31,13 +31,17 @@ export const LogoWrapper = styled.div`
   transform: translateX(-50%);
  `}
 `
-
-export const Logo = styled.div`
-  background: url('/img/logo-example.png');
-  height: 5rem;
-  width: 5rem;
-  background-position: center;
-  background-size: cover;
+type ImageProps = {
+  src: string
+}
+export const Logo = styled.div<ImageProps>`
+  ${({ src }) => css`
+    background: url(${src});
+    height: 5rem;
+    width: 5rem;
+    background-position: center;
+    background-size: cover;
+  `}
 `
 
 export const IconWrapper = styled.div`

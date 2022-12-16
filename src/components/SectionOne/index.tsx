@@ -1,9 +1,5 @@
+import { SectionOneProps } from 'types/api'
 import * as S from './styles'
-
-export type SectionOneProps = {
-  image: string
-  text: string
-}
 
 const SectionOne = ({ image, text }: SectionOneProps) => (
   <S.Wrapper>

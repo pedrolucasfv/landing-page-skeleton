@@ -3,6 +3,13 @@ import { render, fireEvent, screen } from '@testing-library/react'
 import Menu from '.'
 
 const args = {
+  logo: {
+    data: {
+      attributes: {
+        url: '/img/logo-example.png'
+      }
+    }
+  },
   section1: 'Ínicio',
   section2: 'Galeria',
   section3: 'Contato'

@@ -2,18 +2,14 @@ import { useState } from 'react'
 import { Menu as MenuIcon } from '@styled-icons/heroicons-solid/Menu'
 import { CloseOutline as CloseIcon } from '@styled-icons/evaicons-outline/CloseOutline'
 
+import { getImageUrl } from '../../../utils/getImageUrl'
 import MediaMatch from 'components/MediaMatch'
 import * as S from './styles'
+import { MenuProps } from 'types/api'
 
-export type MenuProps = {
-  section1: string
-  section2: string
-  section3: string
-}
-
-const Menu = ({ section1, section2, section3 }: MenuProps) => {
+const Menu = ({ section1, section2, section3, logo }: MenuProps) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
-
+  console.log(getImageUrl(logo.data.attributes.url))
   return (
     <S.Wrapper>
       <MediaMatch lessThan="medium">
@@ -23,7 +19,7 @@ const Menu = ({ section1, section2, section3 }: MenuProps) => {
       </MediaMatch>
 
       <S.LogoWrapper>
-        <S.Logo />
+        <S.Logo src={getImageUrl(logo.data.attributes.url)} />
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">
