@@ -1,14 +1,16 @@
 import { SectionOneProps } from 'types/api'
+import { getImageUrl } from '../../../utils/getImageUrl'
 import * as S from './styles'
 
-const SectionOne = ({ image, text }: SectionOneProps) => (
-  <S.Wrapper>
-    <S.Info>
-      <S.Heading>heading</S.Heading>
-      <S.Text>{text}</S.Text>
-    </S.Info>
-    <S.Image src={image} />
-  </S.Wrapper>
-)
-
+const SectionOne = ({ text, image }: SectionOneProps) => {
+  return (
+    <S.Wrapper>
+      <S.Info>
+        <S.Heading>heading</S.Heading>
+        <S.Text>{text}</S.Text>
+      </S.Info>
+      <S.Image src={getImageUrl(image.data.attributes.url)} />
+    </S.Wrapper>
+  )
+}
 export default SectionOne

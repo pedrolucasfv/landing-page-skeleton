@@ -27,12 +27,26 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionTwo on LandingPage {
+    sectionTwo {
+      slider {
+        data {
+          attributes {
+            url
+          }
+        }
+      }
+      text
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       data {
         attributes {
           ...menu
           ...sectionOne
+          ...sectionTwo
         }
       }
     }

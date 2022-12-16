@@ -1,15 +1,11 @@
 import ImageSlider from 'components/ImageSlider'
+import { SectionTwoProps } from 'types/api'
 import * as S from './styles'
 
-export type SectionTwoProps = {
-  images: string[]
-  text: string
-}
-
-const SectionTwo = ({ images, text }: SectionTwoProps) => (
+const SectionTwo = ({ slider, text }: SectionTwoProps) => (
   <S.Wrapper>
     <S.Slider>
-      <ImageSlider images={images} />
+      <ImageSlider images={slider.data} />
     </S.Slider>
     <S.Text>{text}</S.Text>
   </S.Wrapper>

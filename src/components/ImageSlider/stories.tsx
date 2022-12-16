@@ -6,9 +6,21 @@ export default {
   component: ImageSlider,
   args: {
     images: [
-      '/img/image-example-slider-1.jpg',
-      '/img/image-example-slider-2.jpg',
-      '/img/image-example-slider-3.jpg'
+      {
+        attributes: {
+          url: '/img/image-example-slider-1.jpg'
+        }
+      },
+      {
+        attributes: {
+          url: '/img/image-example-slider-2.jpg'
+        }
+      },
+      {
+        attributes: {
+          url: '/img/image-example-slider-3.jpg'
+        }
+      }
     ]
   }
 } as Meta
