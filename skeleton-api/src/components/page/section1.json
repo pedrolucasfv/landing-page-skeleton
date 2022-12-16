@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_page_section1s",
+  "info": {
+    "displayName": "section1"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

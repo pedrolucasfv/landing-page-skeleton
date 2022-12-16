@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_menus",
+  "info": {
+    "displayName": "menu"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "section1": {
+      "type": "string"
+    },
+    "section2": {
+      "type": "string"
+    },
+    "section3": {
+      "type": "string"
+    }
+  }
+}
