@@ -2,18 +2,19 @@ import Menu from 'components/Menu'
 import Footer from 'components/Footer'
 import SectionOne from 'components/SectionOne'
 import SectionTwo from 'components/SectionTwo'
+import SectionThree from 'components/SectionThree'
 
 import { GetStaticProps } from 'next'
 import client from 'graphql/client'
 import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
 import { LandingPageProps } from 'types/api'
-import SectionThree from 'components/SectionThree'
 
 export default function Home({
   menu,
   sectionOne,
   sectionTwo,
-  sectionThree
+  sectionThree,
+  footer
 }: LandingPageProps) {
   console.log(sectionThree)
   return (
@@ -22,10 +23,7 @@ export default function Home({
       <SectionOne {...sectionOne} />
       <SectionTwo {...sectionTwo} />
       <SectionThree {...sectionThree} />
-      <Footer
-        image="/img/image-example.png"
-        text="Lorem Ipsum is simply dummy Lorem Ipsum is simply dummLorem Ipsum is simply dummy"
-      />
+      <Footer {...footer} />
     </>
   )
 }

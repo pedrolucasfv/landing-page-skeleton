@@ -1,11 +1,7 @@
 import * as S from './styles'
 import React from 'react'
-import { BoxItemProps } from 'types/api'
-
-export type FooterProps = {
-  image: string
-  boxItem: BoxItemProps[]
-}
+import { FooterProps } from 'types/api'
+import { getImageUrl } from '../../../utils/getImageUrl'
 
 const Footer = ({ image, boxItem }: FooterProps) => (
   <S.Wrapper>
@@ -18,7 +14,7 @@ const Footer = ({ image, boxItem }: FooterProps) => (
       ))}
     </S.Info>
     <S.ContentImage>
-      <S.Image src={image} />
+      <S.Image src={getImageUrl(image.data.attributes.url)} />
     </S.ContentImage>
     <S.Copyright>Pedro Lucas F.V. 2022 © All rights reserved.</S.Copyright>
   </S.Wrapper>

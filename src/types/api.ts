@@ -33,9 +33,15 @@ export type BoxItemProps = {
   title: string
   text: string
 }
+
 export type SectionThreeProps = {
   boxItem: BoxItemProps[]
   title: string
+}
+
+export type FooterProps = {
+  image: string
+  boxItem: BoxItemProps[]
 }
 
 export type LandingPageProps = {
@@ -43,4 +49,5 @@ export type LandingPageProps = {
   sectionOne: SectionOneProps
   sectionTwo: SectionTwoProps
   sectionThree: SectionThreeProps
+  footer: FooterProps
 }

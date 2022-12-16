@@ -68,13 +68,14 @@ export const Heading = styled.h2`
 
 export const Info = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 3rem 0;
-
   align-items: center;
+  justify-content: center;
+  padding: 0 5rem;
 `
 
-export const ContentInfo = styled.div``
+export const ContentInfo = styled.div`
+  margin-right: 10rem;
+`
 
 export const Copyright = styled.h2`
   grid-column: 1/3;

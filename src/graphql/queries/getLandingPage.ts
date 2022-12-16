@@ -49,6 +49,22 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment footer on LandingPage {
+    footer {
+      boxItem {
+        title
+        text
+      }
+      image {
+        data {
+          attributes {
+            url
+          }
+        }
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       data {
@@ -57,6 +73,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
           ...sectionOne
           ...sectionTwo
           ...sectionThree
+          ...footer
         }
       }
     }
