@@ -12,7 +12,7 @@ export const Wrapper = styled.main`
   );
   padding: 3rem;
   border: 0.2rem solid ${theme.colors.primary};
-  margin: 2rem;
+  margin: 5rem;
   width: 40rem;
   height: 30rem;
 `
