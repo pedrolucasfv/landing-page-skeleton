@@ -51,3 +51,7 @@ export type LandingPageProps = {
   sectionThree: SectionThreeProps
   footer: FooterProps
 }
+
+export type HomeProps = {
+  landingPage: LandingPageProps
+}
