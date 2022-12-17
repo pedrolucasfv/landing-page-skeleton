@@ -3,8 +3,8 @@ import React from 'react'
 import { FooterProps } from 'types/api'
 import { getImageUrl } from '../../../utils/getImageUrl'
 
-const Footer = ({ image, boxItem }: FooterProps) => (
-  <S.Wrapper>
+const Footer = ({ image, boxItem, color }: FooterProps) => (
+  <S.Wrapper color={color.color}>
     <S.Info>
       {boxItem.map((item, index) => (
         <S.ContentInfo key={index}>

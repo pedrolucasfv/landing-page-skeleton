@@ -1,15 +1,33 @@
 import styled, { css } from 'styled-components'
+import { ColorProps } from 'types/api'
 
-export const Wrapper = styled.main`
-  ${({ theme }) => css`
+const wrapperModifiers = {
+  dark: () => css`
     background: linear-gradient(
-      to left top,
+      to top left,
       #e3e3e3,
       #dedede,
       #e5e5e5,
       #ececec,
       #f5f5f5
     );
+    color: #282828;
+  `,
+  light: () => css`
+    background: linear-gradient(
+      to bottom left,
+      #282828,
+      #212121,
+      #1a1a1a,
+      #131313,
+      #0a0a0a
+    );
+    color: white;
+  `
+}
+
+export const Wrapper = styled.main<ColorProps>`
+  ${({ theme, color }) => css`
     color: #131313;
     height: 50vh;
     display: grid;
@@ -18,6 +36,7 @@ export const Wrapper = styled.main`
 
     border-top: 0.6rem solid ${theme.colors.primary};
     padding: 2rem 4rem;
+    ${wrapperModifiers[color]()}
   `}
 `
 

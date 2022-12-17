@@ -5,13 +5,13 @@ type ImageProps = {
 }
 export const Image = styled.div<ImageProps>`
   ${({ src, theme }) => css`
-    height: 30rem;
-    width: 30rem;
     background-image: url(${src});
     background-position: center;
     background-size: cover;
     margin-bottom: 2rem;
     border: 0.2rem solid ${theme.colors.primary};
+    height: 30rem;
+    width: 40rem;
   `}
 `
 

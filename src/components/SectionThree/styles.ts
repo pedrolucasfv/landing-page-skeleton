@@ -1,17 +1,35 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import theme from 'styles/theme'
-
+const wrapperModifiers = {
+  light: () => css`
+    background: linear-gradient(
+      to left bottom,
+      #e3e3e3,
+      #dedede,
+      #e5e5e5,
+      #ececec,
+      #f5f5f5
+    );
+    color: #282828;
+  `,
+  dark: () => css`
+    background: linear-gradient(
+      to bottom left,
+      #282828,
+      #212121,
+      #1a1a1a,
+      #131313,
+      #0a0a0a
+    );
+    color: white;
+  `
+}
 export const Wrapper = styled.main`
-  padding: 3rem 10rem;
-  background: linear-gradient(
-    to left top,
-    #282828,
-    #212121,
-    #1a1a1a,
-    #131313,
-    #0a0a0a
-  );
-  height: max(calc(100vh - 5rem), 100rem);
+  ${({ color }) => css`
+    padding: 3rem 10rem;
+    height: max(calc(100vh - 5rem), 100rem);
+    ${wrapperModifiers[color]()}
+  `}
 `
 export const HeadingContent = styled.div`
   margin-bottom: 3rem;
@@ -19,7 +37,6 @@ export const HeadingContent = styled.div`
 
 export const Heading = styled.h2`
   position: relative;
-  color: ${theme.colors.lightBg};
   font-size: 4rem;
   &::after {
     position: absolute;

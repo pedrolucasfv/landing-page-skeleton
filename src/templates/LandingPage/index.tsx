@@ -3,7 +3,8 @@ import Menu from 'components/Menu'
 import SectionOne from 'components/SectionOne'
 import SectionThree from 'components/SectionThree'
 import SectionTwo from 'components/SectionTwo'
-import { LandingPageProps } from 'types/api'
+import { useState } from 'react'
+import { ColorProps, LandingPageProps } from 'types/api'
 import * as S from './styles'
 
 const LandingPage = ({
@@ -12,14 +13,21 @@ const LandingPage = ({
   sectionTwo,
   sectionThree,
   footer
-}: LandingPageProps) => (
-  <S.Wrapper>
-    <Menu {...menu} />
-    <SectionOne {...sectionOne} />
-    <SectionTwo {...sectionTwo} />
-    <SectionThree {...sectionThree} />
-    <Footer {...footer} />
-  </S.Wrapper>
-)
+}: LandingPageProps) => {
+  const [color, setColor] = useState<ColorProps>({ color: 'dark' })
 
+  const setMode = () => {
+    if (color.color == 'dark') setColor({ color: 'light' })
+    else setColor({ color: 'dark' })
+  }
+  return (
+    <S.Wrapper>
+      <Menu {...menu} color={color} setMode={setMode} />
+      <SectionOne {...sectionOne} color={color} />
+      <SectionTwo {...sectionTwo} color={color} />
+      <SectionThree {...sectionThree} color={color} />
+      <Footer {...footer} color={color} />
+    </S.Wrapper>
+  )
+}
 export default LandingPage

@@ -12,36 +12,47 @@ export type AttributesProps = {
   }
 }
 
+export type ColorProps = {
+  color: 'light' | 'dark'
+}
+
 export type MenuProps = {
   logo: ImageProps
   section1: string
   section2: string
   section3: string
+  color: ColorProps
+  setMode: () => void
 }
 
 export type SectionOneProps = {
   image: ImageProps
   text: string
+  color: ColorProps
 }
 
 export type SectionTwoProps = {
   slider: SlideProps
   text: string
+  color: ColorProps
 }
 
 export type BoxItemProps = {
   title: string
   text: string
+  color: ColorProps
 }
 
 export type SectionThreeProps = {
   boxItem: BoxItemProps[]
   title: string
+  color: ColorProps
 }
 
 export type FooterProps = {
   image: string
   boxItem: BoxItemProps[]
+  color: ColorProps
 }
 
 export type LandingPageProps = {

@@ -1,27 +1,46 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 import theme from 'styles/theme'
+import { ColorProps } from 'types/api'
 
-export const Wrapper = styled.menu`
-  display: flex;
-  align-items: center;
-  padding: 0.8rem 0;
-  padding-left: 1.2rem;
-  position: relative;
-  background: linear-gradient(
-    to left top,
-    #e3e3e3,
-    #dedede,
-    #e5e5e5,
-    #ececec,
-    #f5f5f5
-  );
-  height: 6rem;
-  border-bottom: 0.3rem solid ${theme.colors.primary};
-  ${media.lessThan('medium')`
+const wrapperModifiers = {
+  light: () => css`
+    background: linear-gradient(
+      to bottom left,
+      #282828,
+      #212121,
+      #1a1a1a,
+      #131313,
+      #0a0a0a
+    );
+  `,
+  dark: () => css`
+    background: linear-gradient(
+      to left top,
+      #e3e3e3,
+      #dedede,
+      #e5e5e5,
+      #ececec,
+      #f5f5f5
+    );
+  `
+}
+
+export const Wrapper = styled.menu<ColorProps>`
+  ${({ color }) => css`
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    height: 6rem;
+    border-bottom: 0.3rem solid ${theme.colors.primary};
+    ${wrapperModifiers[color]()}
+    ${media.lessThan('medium')`
      padding-right: 1.2rem;
      height: 6rem;
  `}
+  `}
 `
 export const LogoWrapper = styled.div`
   margin-left: 2rem;
@@ -169,3 +188,44 @@ export const Sombra = styled.div`
   background: rgba(0, 0, 0, 0.4);
   z-index: 10;
 `
+export const ButtonMode = styled.div`
+  color: gray;
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: absolute;
+  right: 10%;
+  padding: 0.7rem 2rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(
+    to bottom,
+    #505050,
+    #303030,
+    #101010,
+    #131313,
+    #0a0a0a
+  );
+  border: 0.2rem solid ${theme.colors.primary};
+  cursor: pointer;
+  :hover {
+    color: ${theme.colors.primary};
+  }
+`
+/*
+background: linear-gradient(
+  to left top,
+  #e3e3e3,
+  #dedede,
+  #e5e5e5,
+  #ececec,
+  #f5f5f5
+);
+
+background: linear-gradient(
+    to bottom left,
+    #282828,
+    #212121,
+    #1a1a1a,
+    #131313,
+    #0a0a0a
+  );
+*/

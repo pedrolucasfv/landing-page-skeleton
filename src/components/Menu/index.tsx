@@ -7,11 +7,18 @@ import MediaMatch from 'components/MediaMatch'
 import * as S from './styles'
 import { MenuProps } from 'types/api'
 
-const Menu = ({ section1, section2, section3, logo }: MenuProps) => {
+const Menu = ({
+  section1,
+  section2,
+  section3,
+  logo,
+  color,
+  setMode
+}: MenuProps) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
   console.log(getImageUrl(logo.data.attributes.url))
   return (
-    <S.Wrapper>
+    <S.Wrapper color={color.color}>
       <MediaMatch lessThan="medium">
         <S.IconWrapper onClick={() => setIsOpenMenu(true)}>
           <MenuIcon aria-label="Open Menu" />
@@ -29,6 +36,8 @@ const Menu = ({ section1, section2, section3, logo }: MenuProps) => {
           <S.MenuLink href="#">{section3}</S.MenuLink>
         </S.MenuNav>
       </MediaMatch>
+
+      <S.ButtonMode onClick={() => setMode()}>Dark Mode</S.ButtonMode>
 
       {isOpenMenu && <S.Sombra> </S.Sombra>}
       <S.MenuToggle aria-hidden={!isOpenMenu} isOpenMenu={isOpenMenu}>

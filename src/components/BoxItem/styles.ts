@@ -1,28 +1,62 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import theme from 'styles/theme'
+import { ColorProps } from 'types/api'
 
-export const Wrapper = styled.main`
-  background: linear-gradient(
-    to left top,
-    #e3e3e3,
-    #dedede,
-    #e5e5e5,
-    #ececec,
-    #f5f5f5
-  );
-  padding: 3rem;
-  border: 0.2rem solid ${theme.colors.primary};
-  margin: 5rem;
-  width: 40rem;
-  height: 30rem;
+const wrapperModifiers = {
+  dark: () => css`
+    background: linear-gradient(
+      to top left,
+      #e3e3e3,
+      #dedede,
+      #e5e5e5,
+      #ececec,
+      #f5f5f5
+    );
+    color: #282828;
+    h2 {
+    }
+  `,
+  light: () => css`
+    background: linear-gradient(
+      to bottom left,
+      #282828,
+      #212121,
+      #1a1a1a,
+      #131313,
+      #0a0a0a
+    );
+    color: white;
+  `
+}
+
+export const Wrapper = styled.main<ColorProps>`
+  ${({ color }) => css`
+    padding: 3rem;
+    border: 0.2rem solid ${theme.colors.primary};
+    margin: 5rem;
+    width: 40rem;
+    height: 30rem;
+    ${wrapperModifiers[color]()}
+  `}
 `
 
-export const Title = styled.h2`
-  padding-left: ${theme.spacings.xxsmall};
-  border-left: ${theme.spacings.xxsmall} solid ${theme.colors.primary};
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: ${theme.colors.darkGray};
+const titleModifiers = {
+  light: () => css`
+    color: ${theme.colors.lightBg};
+  `,
+  dark: () => css`
+    color: ${theme.colors.darkGray};
+  `
+}
+
+export const Title = styled.h2<ColorProps>`
+  ${({ color }) => css`
+    padding-left: ${theme.spacings.xxsmall};
+    border-left: ${theme.spacings.xxsmall} solid ${theme.colors.primary};
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    ${titleModifiers[color]()}
+  `}
 `
 
 export const Text = styled.h4`
