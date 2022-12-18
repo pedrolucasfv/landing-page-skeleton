@@ -108,7 +108,7 @@ export const MenuLink = styled.a`
 
   &:hover {
     color: ${theme.colors.primary};
-    background-color: lightpink;
+    background-color: ${theme.colors.primary}33;
     &::after {
       content: '';
       position: absolute;
