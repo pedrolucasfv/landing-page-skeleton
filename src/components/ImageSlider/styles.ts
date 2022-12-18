@@ -11,7 +11,6 @@ export const Image = styled.div<ImageProps>`
     margin-bottom: 2rem;
     border: 0.2rem solid ${theme.colors.primary};
     height: 30rem;
-    width: 40rem;
   `}
 `
 
