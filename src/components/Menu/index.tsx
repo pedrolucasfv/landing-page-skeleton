@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Menu as MenuIcon } from '@styled-icons/heroicons-solid/Menu'
 import { CloseOutline as CloseIcon } from '@styled-icons/evaicons-outline/CloseOutline'
+import { Moon } from '@styled-icons/heroicons-solid/Moon'
+import { Sun } from '@styled-icons/heroicons-solid/Sun'
 
 import { getImageUrl } from '../../../utils/getImageUrl'
 import MediaMatch from 'components/MediaMatch'
@@ -36,9 +38,16 @@ const Menu = ({
           <S.MenuLink href="#">{section3}</S.MenuLink>
         </S.MenuNav>
       </MediaMatch>
-
-      <S.ButtonMode onClick={() => setMode()}>Dark Mode</S.ButtonMode>
-
+      {color.color == 'dark' && (
+        <S.ButtonMode color={color.color} onClick={() => setMode()}>
+          <Moon /> Dark Mode
+        </S.ButtonMode>
+      )}
+      {color.color == 'light' && (
+        <S.ButtonMode color={color.color} onClick={() => setMode()}>
+          <Sun /> Light Mode
+        </S.ButtonMode>
+      )}
       {isOpenMenu && <S.Sombra> </S.Sombra>}
       <S.MenuToggle aria-hidden={!isOpenMenu} isOpenMenu={isOpenMenu}>
         <CloseIcon

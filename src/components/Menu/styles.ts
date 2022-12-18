@@ -188,27 +188,66 @@ export const Sombra = styled.div`
   background: rgba(0, 0, 0, 0.4);
   z-index: 10;
 `
-export const ButtonMode = styled.div`
-  color: gray;
-  font-size: 1.5rem;
-  font-weight: 500;
-  position: absolute;
-  right: 10%;
-  padding: 0.7rem 2rem;
-  border-radius: 0.8rem;
-  background: linear-gradient(
-    to bottom,
-    #505050,
-    #303030,
-    #101010,
-    #131313,
-    #0a0a0a
-  );
-  border: 0.2rem solid ${theme.colors.primary};
-  cursor: pointer;
-  :hover {
-    color: ${theme.colors.primary};
-  }
+
+const buttonModeModifiers = {
+  dark: () => css`
+    background: linear-gradient(
+      to bottom left,
+      #282828,
+      #212121,
+      #1a1a1a,
+      #131313,
+      #0a0a0a
+    );
+    color: white;
+    svg {
+      color: rgb(100, 130, 130);
+    }
+  `,
+  light: () => css`
+    background: linear-gradient(
+      to left top,
+      #e3e3e3,
+      #dedede,
+      #e5e5e5,
+      #ececec,
+      #f5f5f5
+    );
+    color: black;
+    svg {
+      color: rgb(160, 160, 0);
+    }
+  `
+}
+
+export const ButtonMode = styled.div<ColorProps>`
+  ${({ color }) => css`
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: absolute;
+    right: 10%;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid ${theme.colors.primary};
+    background: linear-gradient(
+      to bottom left,
+      #282828,
+      #212121,
+      #1a1a1a,
+      #131313,
+      #0a0a0a
+    );
+    cursor: pointer;
+    :hover {
+      color: ${theme.colors.primary};
+    }
+    svg {
+      height: 2rem;
+      margin-right: 1.2rem;
+    }
+    ${buttonModeModifiers[color]()}
+  `}
 `
 /*
 background: linear-gradient(
