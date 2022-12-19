@@ -40,6 +40,9 @@ export const Wrapper = styled.main<ColorProps>`
       flex-direction: column;
       padding: 2rem;
     `}
+    ${media.greaterThan('huge')`
+        padding: 0 29rem;
+    `}
 
     ${wrapperModifiers[color]()}
   `}

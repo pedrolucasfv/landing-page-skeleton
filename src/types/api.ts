@@ -29,12 +29,14 @@ export type SectionOneProps = {
   image: ImageProps
   text: string
   color: ColorProps
+  title: string
 }
 
 export type SectionTwoProps = {
   slider: SlideProps
   text: string
   color: ColorProps
+  title: string
 }
 
 export type BoxItemProps = {

@@ -39,7 +39,10 @@ export const Wrapper = styled.menu<ColorProps>`
     ${media.lessThan('medium')`
      padding-right: 1.2rem;
      height: 6rem;
- `}
+    `}
+    ${media.greaterThan('huge')`
+        padding: 0 29rem;
+    `}
   `}
 `
 export const LogoWrapper = styled.div`

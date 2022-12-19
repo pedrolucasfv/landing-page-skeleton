@@ -41,6 +41,9 @@ export const Wrapper = styled.main<ColorProps>`
     grid-template-rows: 10% 80% 10%;
     grid-template-columns: 7% 38% 10% 38% 7%;
     `}
+    ${media.greaterThan('huge')`
+        padding: 0 29rem;
+    `}
     ${wrapperModifiers[color]()}
   `}
 `
@@ -53,12 +56,31 @@ export const Slider = styled.div`
 `
 
 export const Text = styled.h2`
-  display: flex;
-  grid-column: 4;
-  grid-row: 2;
-  justify-content: center;
-  align-items: center;
   ${media.lessThan('medium')`
     margin: 5rem 0;
+  `}
+`
+
+export const Info = styled.div`
+  grid-column: 4;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`
+export const Title = styled.h2`
+  ${({ theme }) => css`
+    position: relative;
+    margin-bottom: ${theme.spacings.medium};
+    font-size: 3rem;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      content: '';
+      width: 5rem;
+      border-bottom: 0.5rem solid ${theme.colors.primary};
+    }
   `}
 `

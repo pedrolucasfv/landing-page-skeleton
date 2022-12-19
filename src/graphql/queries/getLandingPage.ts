@@ -16,6 +16,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
 
   fragment sectionOne on LandingPage {
     sectionOne {
+      title
       text
       image {
         data {
@@ -36,6 +37,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
           }
         }
       }
+      title
       text
     }
   }

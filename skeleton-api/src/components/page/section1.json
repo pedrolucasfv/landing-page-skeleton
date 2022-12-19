@@ -17,6 +17,10 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "title": {
+      "type": "string",
+      "required": false
     }
   }
 }

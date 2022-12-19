@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
-import theme from 'styles/theme'
 import { ColorProps } from 'types/api'
 const wrapperModifiers = {
   light: () => css`
@@ -38,6 +37,10 @@ export const Wrapper = styled.main<ColorProps>`
     flex-direction: column;
     padding: 3rem 3rem;
     `}
+
+    ${media.greaterThan('huge')`
+        padding: 0 29rem;
+    `}
     ${wrapperModifiers[color]()}
   `}
 `
@@ -46,16 +49,19 @@ export const HeadingContent = styled.div`
 `
 
 export const Heading = styled.h2`
-  position: relative;
-  font-size: 4rem;
-  &::after {
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    content: '';
-    width: 6rem;
-    border-bottom: 0.5rem solid ${theme.colors.primary};
-  }
+  ${({ theme }) => css`
+    position: relative;
+    margin-bottom: ${theme.spacings.medium};
+    font-size: 3rem;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      content: '';
+      width: 4.8rem;
+      border-bottom: 0.5rem solid ${theme.colors.primary};
+    }
+  `}
 `
 export const Box = styled.div`
   display: flex;
