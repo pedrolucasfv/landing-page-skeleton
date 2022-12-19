@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 import { ColorProps } from 'types/api'
 
 const wrapperModifiers = {
@@ -29,11 +30,16 @@ const wrapperModifiers = {
 export const Wrapper = styled.main<ColorProps>`
   ${({ theme, color }) => css`
     color: #131313;
-    height: 60vh;
+
+    ${media.greaterThan('medium')`
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 80% 20%;
-
+    `}
+    ${media.lessThan('medium')`
+    display: flex;
+    flex-direction: column;
+    `}
     border-top: 0.6rem solid ${theme.colors.primary};
     padding: 2rem 4rem;
     ${wrapperModifiers[color]()}
@@ -53,6 +59,9 @@ type ImageProps = {
 }
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
+    ${media.lessThan('medium')`
+    height: 35rem;
+    `}
     height: 40rem;
     width: 40rem;
     background-image: url(${src});
@@ -87,9 +96,15 @@ export const Heading = styled.h2`
 
 export const Info = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0 5rem;
+  align-items: center;
+
+  ${media.lessThan('medium')`
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    `}
+  justify-content: center;
 `
 
 export const ContentInfo = styled.div`

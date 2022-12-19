@@ -31,12 +31,14 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.main<ColorProps>`
   ${({ color }) => css`
-    padding: 3rem;
+    padding: 2rem 1rem;
     border: 0.2rem solid ${theme.colors.primary};
-    margin: 5rem;
+    margin: 3rem 0;
     width: 40rem;
     height: 30rem;
     ${wrapperModifiers[color]()}
+    display: flex;
+    flex-direction: column;
   `}
 `
 

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 import theme from 'styles/theme'
+import { ColorProps } from 'types/api'
 const wrapperModifiers = {
   light: () => css`
     background: linear-gradient(
@@ -24,10 +26,18 @@ const wrapperModifiers = {
     color: white;
   `
 }
-export const Wrapper = styled.main`
+export const Wrapper = styled.main<ColorProps>`
   ${({ color }) => css`
+    ${media.greaterThan('medium')`
     padding: 3rem 10rem;
     height: max(calc(100vh - 5rem), 100rem);
+    `}
+
+    ${media.lessThan('medium')`
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 3rem;
+    `}
     ${wrapperModifiers[color]()}
   `}
 `
