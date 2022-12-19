@@ -56,8 +56,8 @@ type ImageProps = {
 export const Logo = styled.div<ImageProps>`
   ${({ src }) => css`
     background: url(${src});
-    height: 5rem;
-    width: 5rem;
+    height: 2rem;
+    width: 10rem;
     background-position: center;
     background-size: cover;
   `}

@@ -44,7 +44,7 @@ type ImageProps = {
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
     height: 100%;
-    width: 30rem;
+    width: 40rem;
     grid-column: 4;
     grid-row: 2;
     background-image: url(${src});

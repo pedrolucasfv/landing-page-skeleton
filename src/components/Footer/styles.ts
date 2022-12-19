@@ -29,7 +29,7 @@ const wrapperModifiers = {
 export const Wrapper = styled.main<ColorProps>`
   ${({ theme, color }) => css`
     color: #131313;
-    height: 50vh;
+    height: 60vh;
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 80% 20%;
@@ -53,8 +53,8 @@ type ImageProps = {
 }
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
-    height: 20rem;
-    width: 20rem;
+    height: 40rem;
+    width: 40rem;
     background-image: url(${src});
     background-position: center;
     background-size: cover;
