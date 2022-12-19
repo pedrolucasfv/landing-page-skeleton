@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
+import { ColorProps } from 'types/api'
 
 type ImageProps = {
   src: string
@@ -14,17 +15,29 @@ export const Image = styled.div<ImageProps>`
   `}
 `
 
-export const Wrapper = styled.section`
-  ${({ theme }) => css`
+const wrapperModifiers = {
+  light: (theme: DefaultTheme) => css`
+    li {
+      background: ${theme.colors.black};
+    }
+  `,
+  dark: (theme: DefaultTheme) => css`
+    li {
+      background: ${theme.colors.white};
+    }
+  `
+}
+
+export const Wrapper = styled.section<ColorProps>`
+  ${({ theme, color }) => css`
     .slick-dots {
       list-style: none;
       display: flex !important;
       align-items: center;
       justify-content: center;
       margin-top: 2rem;
-
+      ${wrapperModifiers[color](theme)}
       li {
-        background: ${theme.colors.white};
         width: 1.2rem;
         height: 1.2rem;
         border-radius: 100%;
