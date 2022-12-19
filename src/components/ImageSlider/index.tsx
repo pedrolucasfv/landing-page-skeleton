@@ -11,9 +11,10 @@ export type ImageSliderProps = {
 const settings: SliderSettings = {
   dots: true,
   arrows: false,
-  vertical: true,
-  verticalSwiping: true,
-  infinite: false
+  infinite: true,
+  swipe: true,
+  autoplay: true,
+  vertical: true
 }
 
 const ImageSlider = ({ images, color }: ImageSliderProps) => (
