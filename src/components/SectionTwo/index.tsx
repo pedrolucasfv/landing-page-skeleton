@@ -3,7 +3,7 @@ import { SectionTwoProps } from 'types/api'
 import * as S from './styles'
 
 const SectionTwo = ({ slider, text, color, title }: SectionTwoProps) => (
-  <S.Wrapper color={color.color}>
+  <S.Wrapper color={color.color} id="sectionTwo">
     <S.Slider>
       <ImageSlider color={color} images={slider.data} />
     </S.Slider>

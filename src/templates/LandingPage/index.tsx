@@ -22,7 +22,9 @@ const LandingPage = ({
   }
   return (
     <S.Wrapper>
-      <Menu {...menu} color={color} setMode={setMode} />
+      <S.Menu>
+        <Menu {...menu} color={color} setMode={setMode} />
+      </S.Menu>
       <SectionOne {...sectionOne} color={color} />
       <SectionTwo {...sectionTwo} color={color} />
       <SectionThree {...sectionThree} color={color} />

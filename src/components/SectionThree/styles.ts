@@ -22,24 +22,23 @@ const wrapperModifiers = {
       #131313,
       #0a0a0a
     );
-    color: white;
+    color: white; ;
   `
 }
 export const Wrapper = styled.main<ColorProps>`
   ${({ color }) => css`
     ${media.greaterThan('medium')`
     padding: 3rem 10rem;
-    height: max(calc(100vh - 5rem), 100rem);
-    `}
 
-    ${media.lessThan('medium')`
+    `}
     display: flex;
     flex-direction: column;
+    ${media.lessThan('medium')`
     padding: 3rem 3rem;
     `}
 
     ${media.greaterThan('huge')`
-        padding: 0 29rem;
+      padding: 0 29rem;
     `}
     ${wrapperModifiers[color]()}
   `}
@@ -67,4 +66,5 @@ export const Box = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-bottom: 10rem;
 `

@@ -97,9 +97,10 @@ export const MenuNav = styled.div`
   ${media.greaterThan('medium')`
   margin-left: 2rem;
   `}
+  display: flex;
 `
 
-export const MenuLink = styled.a`
+export const MenuLink = styled.div`
   position: relative;
   color: gray;
   font-size: 1.4rem;
@@ -108,7 +109,7 @@ export const MenuLink = styled.a`
   text-align: center;
   font-weight: bold;
   padding: 1.8rem 2rem;
-
+  cursor: pointer;
   &:hover {
     color: ${theme.colors.primary};
     background-color: ${theme.colors.primary}33;

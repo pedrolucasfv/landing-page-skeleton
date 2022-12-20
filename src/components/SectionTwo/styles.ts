@@ -29,16 +29,17 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.main<ColorProps>`
   ${({ color }) => css`
-    height: 60rem;
+    height: max(calc(80vh - 5rem), 80rem);
     width: 100%;
     ${media.lessThan('medium')`
       display: flex;
       flex-direction: column;
       padding: 2rem;
+      height: 70rem;
     `}
     ${media.greaterThan('medium')`
     display: grid;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 80% 20%;
     grid-template-columns: 7% 38% 10% 38% 7%;
     `}
     ${media.greaterThan('huge')`
@@ -50,7 +51,7 @@ export const Wrapper = styled.main<ColorProps>`
 
 export const Slider = styled.div`
   grid-column: 2/3;
-  grid-row: 2;
+  grid-row: 1;
   display: flex;
   align-items: center;
 `
@@ -63,7 +64,7 @@ export const Text = styled.h2`
 
 export const Info = styled.div`
   grid-column: 4;
-  grid-row: 2;
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;

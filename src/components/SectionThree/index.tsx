@@ -3,7 +3,7 @@ import { SectionThreeProps } from 'types/api'
 import * as S from './styles'
 
 const SectionThree = ({ boxItem, title, color }: SectionThreeProps) => (
-  <S.Wrapper color={color.color}>
+  <S.Wrapper color={color.color} id="sectionThree">
     <S.HeadingContent>
       <S.Heading>{title}</S.Heading>
     </S.HeadingContent>

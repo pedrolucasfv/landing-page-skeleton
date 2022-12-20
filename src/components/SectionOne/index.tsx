@@ -4,7 +4,7 @@ import * as S from './styles'
 
 const SectionOne = ({ text, image, color, title }: SectionOneProps) => {
   return (
-    <S.Wrapper color={color.color}>
+    <S.Wrapper color={color.color} id="sectionOne">
       <S.Info>
         <S.Heading>{title}</S.Heading>
         <S.Text>{text}</S.Text>

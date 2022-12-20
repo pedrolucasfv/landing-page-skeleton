@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-scroll'
 import { Menu as MenuIcon } from '@styled-icons/heroicons-solid/Menu'
 import { CloseOutline as CloseIcon } from '@styled-icons/evaicons-outline/CloseOutline'
 import { Moon } from '@styled-icons/heroicons-solid/Moon'
@@ -28,14 +29,47 @@ const Menu = ({
       </MediaMatch>
 
       <S.LogoWrapper>
-        <S.Logo src={getImageUrl(logo.data.attributes.url)} />
+        <Link
+          to="sectionOne"
+          spy={true}
+          smooth={true}
+          offset={-6}
+          duration={500}
+        >
+          <S.Logo src={getImageUrl(logo.data.attributes.url)} />
+        </Link>
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <S.MenuLink href="#">{section1}</S.MenuLink>
-          <S.MenuLink href="#">{section2}</S.MenuLink>
-          <S.MenuLink href="#">{section3}</S.MenuLink>
+          <Link
+            to="sectionOne"
+            spy={true}
+            smooth={true}
+            offset={-6}
+            duration={500}
+          >
+            <S.MenuLink>{section1}</S.MenuLink>
+          </Link>
+          <Link
+            to="sectionTwo"
+            spy={true}
+            smooth={true}
+            offset={-46}
+            duration={500}
+          >
+            <S.MenuLink>{section2}</S.MenuLink>
+          </Link>
+
+          <Link
+            to="sectionThree"
+            spy={true}
+            smooth={true}
+            offset={-66}
+            duration={500}
+          >
+            <S.MenuLink>{section3}</S.MenuLink>
+          </Link>
         </S.MenuNav>
       </MediaMatch>
       {color.color == 'dark' && (
@@ -48,6 +82,8 @@ const Menu = ({
           <Sun /> Light Mode
         </S.ButtonMode>
       )}
+
+      {/* MENU LATERAL NO MOBILE */}
       {isOpenMenu && <S.Sombra> </S.Sombra>}
       <S.MenuToggle aria-hidden={!isOpenMenu} isOpenMenu={isOpenMenu}>
         <CloseIcon
@@ -55,9 +91,38 @@ const Menu = ({
           onClick={() => setIsOpenMenu(false)}
         />
         <S.MenuNav>
-          <S.MenuLink href="#">{section1}</S.MenuLink>
-          <S.MenuLink href="#">{section2}</S.MenuLink>
-          <S.MenuLink href="#">{section3}</S.MenuLink>
+          <Link
+            to="sectionOne"
+            spy={true}
+            smooth={true}
+            offset={-6}
+            duration={500}
+            onClick={() => setIsOpenMenu(false)}
+          >
+            <S.MenuLink>{section1}</S.MenuLink>
+          </Link>
+
+          <Link
+            to="sectionTwo"
+            spy={true}
+            smooth={true}
+            offset={-46}
+            duration={500}
+            onClick={() => setIsOpenMenu(false)}
+          >
+            <S.MenuLink>{section2}</S.MenuLink>
+          </Link>
+
+          <Link
+            to="sectionThree"
+            spy={true}
+            smooth={true}
+            offset={-66}
+            duration={500}
+            onClick={() => setIsOpenMenu(false)}
+          >
+            <S.MenuLink>{section3}</S.MenuLink>
+          </Link>
         </S.MenuNav>
       </S.MenuToggle>
     </S.Wrapper>

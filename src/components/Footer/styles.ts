@@ -34,7 +34,7 @@ export const Wrapper = styled.main<ColorProps>`
     ${media.greaterThan('medium')`
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 20% 60% 20%;
     `}
     ${media.lessThan('medium')`
     display: flex;
@@ -73,7 +73,7 @@ export const Image = styled.div<ImageProps>`
 
 export const ContentImage = styled.div`
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,25 +95,25 @@ export const Heading = styled.h2`
 `
 
 export const Info = styled.div`
+  grid-row: 2;
   display: flex;
   padding: 0 5rem;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 
   ${media.lessThan('medium')`
     flex-direction: column;
-    align-items: flex-start;
     padding: 0;
     `}
-  justify-content: center;
 `
 
 export const ContentInfo = styled.div`
-  margin-right: 10rem;
+  margin-right: 7rem;
 `
 
 export const Copyright = styled.h2`
   grid-column: 1/3;
-  grid-row: 2;
+  grid-row: 3;
   display: flex;
   justify-content: center;
   align-items: center;
