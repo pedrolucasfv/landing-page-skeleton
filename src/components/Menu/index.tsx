@@ -18,7 +18,7 @@ const Menu = ({
   setMode
 }: MenuProps) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
-  console.log(getImageUrl(logo.data.attributes.url))
+
   return (
     <S.Wrapper color={color.color}>
       <MediaMatch lessThan="medium">

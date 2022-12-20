@@ -6,10 +6,17 @@ export default {
   title: 'Menu',
   component: Menu,
   args: {
-    image: '/img/logo-example.png',
+    logo: {
+      data: {
+        attributes: {
+          url: '/img/image-example.png'
+        }
+      }
+    },
     section1: 'Ínicio',
     section2: 'Galeria',
-    section3: 'Contato'
+    section3: 'Contato',
+    color: { color: 'dark' }
   }
 } as Meta
 

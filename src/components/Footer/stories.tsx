@@ -6,7 +6,13 @@ export default {
   title: 'Footer',
   component: Footer,
   args: {
-    image: '/img/image-example.png',
+    image: {
+      data: {
+        attributes: {
+          url: '/img/image-example.png'
+        }
+      }
+    },
     boxItem: [
       {
         title: 'Contato',
@@ -16,7 +22,8 @@ export default {
         title: 'Localização',
         text: 'aqui eu vou por alguma coisa'
       }
-    ]
+    ],
+    color: { color: 'dark' }
   }
 } as Meta
 

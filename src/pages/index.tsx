@@ -10,7 +10,7 @@ export default function Home({ landingPage }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const { landingPage } = await client.request(GET_LANDING_PAGE)
-  console.log(landingPage.data.attributes)
+
   return {
     props: {
       landingPage: landingPage.data.attributes

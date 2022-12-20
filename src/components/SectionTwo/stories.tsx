@@ -27,7 +27,9 @@ export default {
         }
       ]
     },
-    text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s'
+    text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+    title: 'slider',
+    color: { color: 'light' }
   }
 } as Meta
 
