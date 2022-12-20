@@ -52,7 +52,7 @@ export type SectionThreeProps = {
 }
 
 export type FooterProps = {
-  image: string
+  image: ImageProps
   boxItem: BoxItemProps[]
   color: ColorProps
 }
