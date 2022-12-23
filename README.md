@@ -1,5 +1,5 @@
 ## Project
-
+This is a dinamic landing page with Strapi CMS and GraphQL.
 
 This project use a boilerplate of a course called [React Avançado](https://reactavancado.com.br/).
 ![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
@@ -9,6 +9,25 @@ I have decided to create a "notion" for each project I do, in order to have a re
 
 Notion: https://www.notion.so/pedrolucasfv/Landing-Page-Skeleton-eff4115b141041bcb5f5236eb6a346b8
 
+
+
+## Screenshots
+
+![gif](https://github.com/pedrolucasfv/landing-page-skeleton/blob/main/public/screenshots/gif-project.gif)
+
+### Desktop:
+
+<p align="center">
+    <img width= "702px" height="362px" src="/public/screenshots/dark-desktop.png">
+</p>
+
+### Mobile:
+
+<p align="center">
+    <img width= "215px" height="408px" src="/public/screenshots/light-mobile.png">
+</p>
+
+
 ## What is inside?
 
 This project uses lot of stuff as:
@@ -16,12 +35,12 @@ This project uses lot of stuff as:
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
 - [Styled Components](https://styled-components.com/)
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - [Storybook](https://storybook.js.org/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
+- [GraphQL](https://graphql.org/)
+- [Strapi](https://strapi.io/)
 
 
 
