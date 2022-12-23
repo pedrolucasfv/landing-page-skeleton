@@ -13,6 +13,9 @@ const wrapperModifiers = {
       #131313,
       #0a0a0a
     );
+    svg {
+      color: white;
+    }
   `,
   dark: () => css`
     background: linear-gradient(
@@ -23,6 +26,9 @@ const wrapperModifiers = {
       #ececec,
       #f5f5f5
     );
+    svg {
+      color: black;
+    }
   `
 }
 

@@ -34,6 +34,7 @@ export const Wrapper = styled.main<ColorProps>`
      display: grid;
      grid-template-rows: 15% 65% 20%;
      grid-template-columns: 7% 38% 10% 38% 7%;
+     padding-top: 7rem;
     `}
     ${media.lessThan('medium')`
       display: flex;
@@ -42,9 +43,9 @@ export const Wrapper = styled.main<ColorProps>`
       padding-top: 7rem;
     `}
     ${media.greaterThan('huge')`
-        padding: 0 29rem;
+      padding: 0 29rem;
     `}
-
+      
     ${wrapperModifiers[color]()}
   `}
 `
