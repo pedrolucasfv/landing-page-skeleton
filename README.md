@@ -56,7 +56,15 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Open the Strapi, go to skeleton-api folder:
+
+```bash
+npm run develop
+# or
+yarn develop
+```
+
+Open [http://localhost:1337](http://localhost:1337) with your browser to see the result.
 
 ## Commands
 
