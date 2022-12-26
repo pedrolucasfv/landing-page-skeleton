@@ -19,11 +19,11 @@ const wrapperModifiers = {
   light: () => css`
     background: linear-gradient(
       to bottom left,
-      #282828,
-      #212121,
-      #1a1a1a,
-      #131313,
-      #0a0a0a
+      #585858,
+      #515151,
+      #4a4a4a,
+      #434343,
+      #3a3a3a
     );
     color: white;
   `
@@ -58,11 +58,13 @@ export const Title = styled.h2<ColorProps>`
     font-size: 2rem;
     margin-bottom: 2rem;
     ${titleModifiers[color]()}
+    margin-left: 2rem;
   `}
 `
 
 export const Text = styled.h4`
   font-size: 1.5rem;
   font-weight: 450;
-  color: ${theme.colors.gray};
+  color: ${theme.colors.lightBg};
+  margin: 0rem 1rem;
 `
