@@ -7,7 +7,7 @@ This project use a boilerplate of a course called [React Avançado](https://reac
 ### Notion
 I have decided to create a "notion" for each project I do, in order to have a record and details of projects.
 
-Notion: https://www.notion.so/pedrolucasfv/Landing-Page-Skeleton-eff4115b141041bcb5f5236eb6a346b8
+Notion: https://pedrolucasfv.notion.site/Landing-Page-Skeleton-26cd9985719146f79a9ed6cd70279c80
 
 
 
