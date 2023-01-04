@@ -21,6 +21,10 @@ Notion: https://www.notion.so/pedrolucasfv/Landing-Page-Skeleton-eff4115b141041b
     <img width= "702px" height="362px" src="/public/screenshots/dark-desktop.png">
 </p>
 
+<p align="center">
+    <img width= "702px" height="362px" src="/public/screenshots/screenshot-strapi.png">
+</p>
+
 ### Mobile:
 
 <p align="center">
