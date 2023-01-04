@@ -17,12 +17,14 @@ Notion: https://pedrolucasfv.notion.site/Landing-Page-Skeleton-26cd9985719146f79
 
 ### Desktop:
 
+###### Page:
 <p align="center">
     <img width= "702px" height="362px" src="/public/screenshots/dark-desktop.png">
 </p>
 
+###### Strapi CMS:
 <p align="center">
-    <img width= "702px" height="362px" src="/public/screenshots/screenshot-strapi.png">
+    <img width= "322px" height="362px" src="/public/screenshots/screenshot-strapi.png">
 </p>
 
 ### Mobile:
