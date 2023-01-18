@@ -66,7 +66,8 @@ export const Image = styled.div<ImageProps>`
     grid-row: 2;
     background-image: url(${src});
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
   `}
 `
 export const Heading = styled.h2`

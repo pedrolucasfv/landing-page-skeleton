@@ -46,7 +46,7 @@ export const Wrapper = styled.section<ColorProps>`
         justify-content: center;
         margin: 0 ${theme.spacings.xxsmall};
         cursor: pointer;
-        transition: box-shadow '0.1s ease-in-out';
+        transition: box-shadow '1s ease-in-out';
 
         &.slick-active {
           background: ${theme.colors.primary};

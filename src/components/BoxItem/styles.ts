@@ -13,8 +13,6 @@ const wrapperModifiers = {
       #f5f5f5
     );
     color: #282828;
-    h2 {
-    }
   `,
   light: () => css`
     background: linear-gradient(
@@ -65,6 +63,5 @@ export const Title = styled.h2<ColorProps>`
 export const Text = styled.h4`
   font-size: 1.5rem;
   font-weight: 450;
-  color: ${theme.colors.lightBg};
   margin: 0rem 1rem;
 `

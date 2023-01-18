@@ -14,7 +14,8 @@ const settings: SliderSettings = {
   infinite: true,
   swipe: true,
   autoplay: true,
-  vertical: true
+  vertical: true,
+  autoplaySpeed: 3000
 }
 
 const ImageSlider = ({ images, color }: ImageSliderProps) => (
