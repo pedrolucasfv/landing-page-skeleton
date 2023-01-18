@@ -13,6 +13,7 @@ Notion: https://pedrolucasfv.notion.site/Landing-Page-Skeleton-26cd9985719146f79
 
 ## Screenshots
 
+### GIF:
 ![gif](https://github.com/pedrolucasfv/landing-page-skeleton/blob/main/public/screenshots/gif-project.gif)
 
 ### Desktop:
